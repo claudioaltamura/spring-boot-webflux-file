@@ -7,13 +7,12 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class SpringBootWebfluxFileApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(SpringBootWebfluxFileApplication.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(SpringBootWebfluxFileApplication.class, args);
+  }
 
-	@Bean
-	public ProjectRepository projectRepository() {
-		return new ProjectRepository("projects.csv");
-	}
-
+  @Bean
+  public ProjectRepository projectRepository() {
+    return new ProjectRepository("projects.csv");
+  }
 }

@@ -10,19 +10,19 @@ import org.springframework.test.web.reactive.server.WebTestClient;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class SpringBootWebfluxFileApplicationTests {
 
-	@Autowired
-	private WebTestClient webTestClient;
+  @Autowired private WebTestClient webTestClient;
 
-	@Test
-	@DisplayName("API Test: get project list")
-	void shouldReturnList() {
-		webTestClient.get()
-				.uri("/projects")
-				.header(HttpHeaders.ACCEPT, "application/json")
-				.exchange()
-				.expectStatus().isOk()
-				.expectBodyList(Project.class)
-				.hasSize(6);
-	}
-
+  @Test
+  @DisplayName("API Test: get project list")
+  void shouldReturnList() {
+    webTestClient
+        .get()
+        .uri("/projects")
+        .header(HttpHeaders.ACCEPT, "application/json")
+        .exchange()
+        .expectStatus()
+        .isOk()
+        .expectBodyList(Project.class)
+        .hasSize(6);
+  }
 }
