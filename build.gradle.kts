@@ -1,9 +1,9 @@
 plugins {
 	java
-	id("com.diffplug.spotless") version "6.19.0"
-	id("com.github.ben-manes.versions") version "0.46.0"
-	id("org.springframework.boot") version "3.1.0"
-	id("io.spring.dependency-management") version "1.1.0"
+	id("com.diffplug.spotless") version "6.23.2"
+	id("com.github.ben-manes.versions") version "0.50.0"
+	id("org.springframework.boot") version "3.2.0"
+	id("io.spring.dependency-management") version "1.1.4"
 }
 
 group = "de.claudioltamura"
@@ -15,7 +15,7 @@ repositories {
 }
 
 dependencies {
-	implementation("com.opencsv:opencsv:5.7.1")
+	implementation("com.opencsv:opencsv:5.9")
 	implementation("org.springframework.boot:spring-boot-starter-webflux")
 	compileOnly("org.projectlombok:lombok")
 	annotationProcessor("org.projectlombok:lombok")
